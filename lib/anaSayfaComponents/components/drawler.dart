@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:login/anaSayfaComponents/yerler/risklialanlar.dart';
+import 'package:login/Screens/Welcome/welcome_screen.dart';
+import 'package:login/alanlar/riskliAlanlar.dart';
+
 import 'package:login/sonDepremler/views/sonDepremlerAnaSayfa.dart';
 
 class Menu extends StatefulWidget {
@@ -28,8 +30,19 @@ class _MenuState extends State<Menu> {
             otherAccountsPictures: <Widget>[
               CircleAvatar(
                 backgroundColor: Colors.white,
-                child: Text("Oturum Aç"),
-              )
+                child: IconButton(
+                  icon: Icon(
+                    Icons.account_box_outlined,
+                    color: Colors.black,
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => WelcomeScreen()),
+                    );
+                  },
+                ),
+              ),
             ],
           ),
           ListTile(
@@ -52,7 +65,7 @@ class _MenuState extends State<Menu> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => RisliAlanlar()),
+                MaterialPageRoute(builder: (context) => RiskliAlanlar()),
               );
             },
             title: new Text("Riskli Alanlar"),

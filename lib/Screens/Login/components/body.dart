@@ -10,58 +10,62 @@ import 'package:login/components/text_field_container.dart';
 import 'package:login/constants.dart';
 
 class Body extends StatelessWidget {
-  const Body({
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  Body({
     Key key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Background(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Text(
-            "OTURUM AÇ",
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
-          Image(
-            image: AssetImage("assets/images/YeniLogo1.png"),
-            width: 130,
-            height: 130,
-          ),
-          RoundedInputField(
-            hintText: "E-mail Adresiniz",
-            onChanged: (value) {},
-          ),
-          RoundedPasswordField(
-            onChanged: (value) {},
-          ),
-          RoundedButton(
-            text: "OTURUM AÇ",
-            press: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return AnaSayfaBackground();
-                  },
-                ),
-              );
-            },
-          ),
-          AlreadyHaveAnAccountCheck(
-            press: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) {
-                    return SignUpScreen();
-                  },
-                ),
-              );
-            },
-          ),
-        ],
+    return Form(
+      key: _formKey,
+      child: Background(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              "OTURUM AÇ",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            Image(
+              image: AssetImage("assets/images/YeniLogo1.png"),
+              width: 130,
+              height: 130,
+            ),
+            RoundedInputField(
+              hintText: "E-mail Adresiniz",
+              onSaved: (value) {},
+            ),
+            RoundedPasswordField(
+              onChanged: (value) {},
+            ),
+            RoundedButton(
+              text: "OTURUM AÇ",
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return AnaSayfaBackground();
+                    },
+                  ),
+                );
+              },
+            ),
+            AlreadyHaveAnAccountCheck(
+              press: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return SignUpScreen();
+                    },
+                  ),
+                );
+              },
+            ),
+          ],
+        ),
       ),
     );
   }

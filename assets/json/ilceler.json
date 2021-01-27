@@ -1,0 +1,137 @@
+{
+    "İlçeler": [
+        {
+            "Yıl": "2019",
+            "İlçe": "Pamukkale",
+            "İlçe Nüfusu": "346,625",
+            "Risk Durumu": "1.Derece",
+            "Nüfus": "346625"
+        },
+        {
+            "Yıl": "2019",
+            "İlçe": "Merkezefendi",
+            "İlçe Nüfusu": "311,177",
+            "Risk Durumu": "1.Derece",
+            "Nüfus": "311177"
+        },
+        {
+            "Yıl": "2019",
+            "İlçe": "Çivril",
+            "İlçe Nüfusu": "60,333",
+            "Risk Durumu": "2. Derece",
+            "Nüfus": "60333"
+        },
+        {
+            "Yıl": "2019",
+            "İlçe": "Acıpayam",
+            "İlçe Nüfusu": "55,351",
+            "Risk Durumu": "1.Derece",
+            "Nüfus": "55351"
+        },
+        {
+            "Yıl": "2019",
+            "İlçe": "Tavas",
+            "İlçe Nüfusu": "43,320",
+            "Risk Durumu": "1.Derece",
+            "Nüfus": "43320"
+        },
+        {
+            "Yıl": "2019",
+            "İlçe": "Honaz",
+            "İlçe Nüfusu": "34,343",
+            "Risk Durumu": "1.Derece",
+            "Nüfus": "34343"
+        },
+        {
+            "Yıl": "2019",
+            "İlçe": "Sarayköy",
+            "İlçe Nüfusu": "30,810",
+            "Risk Durumu": "1.Derece",
+            "Nüfus": "30810"
+        },
+        {
+            "Yıl": "2019",
+            "İlçe": "Buldan",
+            "İlçe Nüfusu": "27,179",
+            "Risk Durumu": "1.Derece",
+            "Nüfus": "27,179"
+        },
+        {
+            "Yıl": "2019",
+            "İlçe": "Kale",
+            "İlçe Nüfusu": "20,310",
+            "Risk Durumu": "1.Derece",
+            "Nüfus": "20,310"
+        },
+        {
+            "Yıl": "2019",
+            "İlçe": "Çal",
+            "İlçe Nüfusu": "18,869",
+            "Risk Durumu": "1.Derece",
+            "Nüfus": "18,869"
+        },
+        {
+            "Yıl": "2019",
+            "İlçe": "Çameli",
+            "İlçe Nüfusu": "18,039",
+            "Risk Durumu": "1.Derece",
+            "Nüfus": "18,039"
+        },
+        {
+            "Yıl": "2019",
+            "İlçe": "Serinhisar",
+            "İlçe Nüfusu": "14,451",
+            "Risk Durumu": "1.Derece",
+            "Nüfus": "14,451"
+        },
+        {
+            "Yıl": "2019",
+            "İlçe": "Bozkurt",
+            "İlçe Nüfusu": "12,671",
+            "Risk Durumu": "1.Derece",
+            "Nüfus": "12,671"
+        },
+        {
+            "Yıl": "2019",
+            "İlçe": "Güney",
+            "İlçe Nüfusu": "9,802",
+            "Risk Durumu": "1.Derece",
+            "Nüfus": "9,802"
+        },
+        {
+            "Yıl": "2019",
+            "İlçe": "Çardak",
+            "İlçe Nüfusu": "8,736",
+            "Risk Durumu": "1.Derece",
+            "Nüfus": "8,736"
+        },
+        {
+            "Yıl": "2019",
+            "İlçe": "Bekilli",
+            "İlçe Nüfusu": "6,826",
+            "Risk Durumu": "1.Derece",
+            "Nüfus": "6,826"
+        },
+        {
+            "Yıl": "2019",
+            "İlçe": "Babadağ",
+            "İlçe Nüfusu": "6,445",
+            "Risk Durumu": "1.Derece",
+            "Nüfus": "6,445"
+        },
+        {
+            "Yıl": "2019",
+            "İlçe": "Beyağaç",
+            "İlçe Nüfusu": "6,397",
+            "Risk Durumu": "1.Derece",
+            "Nüfus": "6,397"
+        },
+        {
+            "Yıl": "2019",
+            "İlçe": "Baklan",
+            "İlçe Nüfusu": "5,524",
+            "Risk Durumu": "1.Derece",
+            "Nüfus": "5,524"
+        }
+    ]
+}
