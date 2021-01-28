@@ -1,7 +1,4 @@
-import 'dart:ffi';
-
 import 'package:login/anaSayfaComponents/components/drawler.dart';
-import 'package:login/sonDepremler/arguments/EarthquakeDetail.dart';
 import 'package:login/sonDepremler/helpers/map_helpers.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';

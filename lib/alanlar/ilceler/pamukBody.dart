@@ -48,8 +48,10 @@ class Pamukbody extends StatelessWidget {
                 subtitle: Row(
                   children: <Widget>[
                     Icon(Icons.add_alert_sharp, color: Colors.yellowAccent),
-                    Text('${pamukkale[index][2]}',
-                        style: TextStyle(color: Colors.white)),
+                    Flexible(
+                      child: Text('${pamukkale[index][2]}',
+                          style: TextStyle(color: Colors.white)),
+                    )
                   ],
                 ),
                 trailing: IconButton(

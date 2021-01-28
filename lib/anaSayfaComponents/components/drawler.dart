@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:login/Screens/Welcome/welcome_screen.dart';
+import 'package:login/alanlar/ilceler/hastaneler/hastaneler.dart';
+import 'package:login/alanlar/karakollar/karakollar.dart';
 import 'package:login/alanlar/riskliAlanlar.dart';
 
 import 'package:login/sonDepremler/views/sonDepremlerAnaSayfa.dart';
@@ -84,11 +86,23 @@ class _MenuState extends State<Menu> {
             trailing: new Icon(Icons.arrow_forward_ios),
           ),
           ListTile(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Hastaneler()),
+              );
+            },
             title:
                 new Text("Öncelikli Kamu Kurumları(Sağlık,Eğitim,Kamu Hizmeti"),
             trailing: new Icon(Icons.arrow_forward_ios),
           ),
           ListTile(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Karakollar()),
+              );
+            },
             title: new Text("En Yakın Kamu Kuruluşları"),
             trailing: new Icon(Icons.arrow_forward_ios),
           ),

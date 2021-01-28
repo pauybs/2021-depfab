@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:login/alanlar/ilceler/pamukkale.dart';
-import 'package:login/alanlar/listeler.dart';
+import 'package:login/alanlar/models/hastaneler.dart';
+import '../mapper/showOnMap.dart';
 
-class Makebody extends StatelessWidget {
-  const Makebody({
-    Key key,
-  }) : super(key: key);
+class Hastanebody extends StatelessWidget {
+  final double enlem;
+  final double boylam;
+  final String mahalle;
+  const Hastanebody({this.boylam, this.enlem, this.mahalle});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,7 @@ class Makebody extends StatelessWidget {
       child: ListView.builder(
         scrollDirection: Axis.vertical,
         shrinkWrap: true,
-        itemCount: 19,
+        itemCount: pamukkale.length,
         itemBuilder: (BuildContext context, int index) {
           return Card(
             elevation: 8.0,
@@ -38,7 +39,7 @@ class Makebody extends StatelessWidget {
                   ),
                 ),
                 title: Text(
-                  '${ilceler[index][0]}',
+                  '${pamukkale[index][0]}',
                   style: TextStyle(
                       color: Colors.white, fontWeight: FontWeight.bold),
                 ),
@@ -47,10 +48,8 @@ class Makebody extends StatelessWidget {
                 subtitle: Row(
                   children: <Widget>[
                     Icon(Icons.add_alert_sharp, color: Colors.yellowAccent),
-                    Flexible(
-                      child: Text('${ilceler[index][2]}' + " Deprem bölgesi",
-                          style: TextStyle(color: Colors.white)),
-                    )
+                    Text('${pamukkale[index][1]}',
+                        style: TextStyle(color: Colors.white, fontSize: 11)),
                   ],
                 ),
                 trailing: IconButton(
@@ -59,8 +58,15 @@ class Makebody extends StatelessWidget {
                     color: Colors.white,
                   ),
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Pamukkale()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ShowOnMap(
+                            enlem: pamukkale[index][2],
+                            boylam: pamukkale[index][3],
+                            mahalle: pamukkale[index][1],
+                          ),
+                        ));
                   },
                 ),
               ),

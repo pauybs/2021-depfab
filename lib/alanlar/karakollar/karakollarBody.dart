@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:login/alanlar/ilceler/pamukkale.dart';
-import 'package:login/alanlar/listeler.dart';
+import 'package:login/alanlar/ilceler/mapper/showOnMap.dart';
+import 'package:login/alanlar/models/hastaneler.dart';
+import 'package:login/alanlar/models/karakollar.dart';
 
-class Makebody extends StatelessWidget {
-  const Makebody({
-    Key key,
-  }) : super(key: key);
+class Karakollarbody extends StatelessWidget {
+  final double enlem;
+  final double boylam;
+  final String mahalle;
+  const Karakollarbody({this.boylam, this.enlem, this.mahalle});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +15,7 @@ class Makebody extends StatelessWidget {
       child: ListView.builder(
         scrollDirection: Axis.vertical,
         shrinkWrap: true,
-        itemCount: 19,
+        itemCount: pamukkale.length,
         itemBuilder: (BuildContext context, int index) {
           return Card(
             elevation: 8.0,
@@ -24,7 +26,7 @@ class Makebody extends StatelessWidget {
                 contentPadding:
                     EdgeInsets.symmetric(horizontal: 20.0, vertical: 10.0),
                 leading: Container(
-                  padding: EdgeInsets.only(right: 12.0),
+                  padding: EdgeInsets.only(right: 0.0),
                   decoration: new BoxDecoration(
                       border: new Border(
                           right: new BorderSide(
@@ -38,18 +40,19 @@ class Makebody extends StatelessWidget {
                   ),
                 ),
                 title: Text(
-                  '${ilceler[index][0]}',
+                  '${karakollar[index][0]}',
                   style: TextStyle(
                       color: Colors.white, fontWeight: FontWeight.bold),
                 ),
+
                 // subtitle: Text("Intermediate", style: TextStyle(color: Colors.white)),
 
                 subtitle: Row(
                   children: <Widget>[
                     Icon(Icons.add_alert_sharp, color: Colors.yellowAccent),
                     Flexible(
-                      child: Text('${ilceler[index][2]}' + " Deprem bölgesi",
-                          style: TextStyle(color: Colors.white)),
+                      child: Text('${karakollar[index][1]}',
+                          style: TextStyle(color: Colors.white, fontSize: 11)),
                     )
                   ],
                 ),
@@ -59,8 +62,15 @@ class Makebody extends StatelessWidget {
                     color: Colors.white,
                   ),
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Pamukkale()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ShowOnMap(
+                            enlem: karakollar[index][2],
+                            boylam: karakollar[index][3],
+                            mahalle: karakollar[index][1],
+                          ),
+                        ));
                   },
                 ),
               ),
