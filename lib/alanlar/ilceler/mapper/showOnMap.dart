@@ -25,7 +25,7 @@ class _EarthquakeOnMapState extends State<ShowOnMap> {
         ),
         drawer: Menu(),
         body: GoogleMap(
-          mapType: MapType.satellite,
+          mapType: MapType.terrain,
           initialCameraPosition: CameraPosition(
               target: LatLng(widget.enlem, widget.boylam), zoom: 12),
           markers: {

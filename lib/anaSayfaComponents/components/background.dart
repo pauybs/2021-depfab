@@ -72,7 +72,7 @@ class _BacgroundState extends State<AnaSayfaBackground> {
         drawer: Menu(),
         body: Stack(children: <Widget>[
           GoogleMap(
-            mapType: MapType.satellite,
+            mapType: MapType.terrain,
             initialCameraPosition: CameraPosition(
                 target: LatLng(37.7829046, 29.0466272), zoom: 12),
             markers: {
