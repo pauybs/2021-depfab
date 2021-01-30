@@ -1,7 +1,7 @@
 # 2021-debfab
 
 Hazırlayanlar:
-Gizem Çıngı 17219512
+Gizem Çınğı 17219512
 Yakup Ataş  16219502
 
 
